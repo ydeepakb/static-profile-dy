@@ -1,0 +1,88 @@
+[
+  {
+    "company": "Exafluence",
+    "companyDomain": "exafluence.com",
+    "logoUrl": "logos/Exf_Data_Driven_Logo.jpg",
+    "role": "Lead Engineer",
+    "location": "Houston, TX",
+    "startDate": "2023-07",
+    "endDate": "Present",
+    "highlights": [
+      "Lead engineering delivery for the ProAg crop insurance platform, owning planning, solution design, implementation, release management, and production support.",
+      "Translate business and product requirements into scalable technical architecture and clear implementation plans across distributed teams.",
+      "Designed and built an AI-enabled MCP server that exposes enterprise microservices as agent-consumable tools to support intelligent workflow automation.",
+      "Architect and develop secure REST APIs in C# and .NET Core with API Gateway, IAM-based access control, and robust error and observability patterns.",
+      "Deliver cloud-native AWS solutions using EC2, S3, Lambda, RDS, and CloudWatch, with Terraform-based infrastructure automation.",
+      "Drive engineering quality through code reviews, TDD practices, CI/CD pipelines, and containerized deployments using Docker and EKS."
+    ]
+  },
+  {
+    "company": "Atos/Syntel",
+    "companyDomain": "atos.net",
+    "logoUrl": "logos/atos-syntel.jpeg",
+    "role": "Sr. Software Engineer",
+    "location": "Houston, TX",
+    "startDate": "2021-07",
+    "endDate": "2023-07",
+    "highlights": [
+      "Delivered policy administration capabilities for quote creation, policy lifecycle management, endorsements, and claims processing.",
+      "Built and enhanced Angular modules including route guards, secure DOM handling, and responsive user experience improvements.",
+      "Improved front-end performance by optimizing component rendering and reducing unnecessary change detection cycles.",
+      "Developed and maintained unit test coverage using Jasmine and Karma and supported deployments across multiple environments."
+    ]
+  },
+  {
+    "company": "Majesco",
+    "companyDomain": "majesco.com",
+    "logoUrl": "logos/majesco.png",
+    "role": "Software Specialist",
+    "location": "Houston, TX",
+    "startDate": "2017-07",
+    "endDate": "2021-07",
+    "highlights": [
+      "Contributed to Quote Bind (v5), a web-based auto insurance quoting platform integrated with Guidewire PolicyCenter and BillingCenter.",
+      "Delivered QuickPay and Moderator modules to support payment operations and underwriting moderation workflows.",
+      "Provided technical ownership across feature design, code reviews, defect resolution, impact analysis, and client coordination."
+    ]
+  },
+  {
+    "company": "Deloitte India",
+    "companyDomain": "deloitte.com",
+    "logoUrl": "logos/deloitte.jpeg",
+    "role": "Sr. Developer",
+    "location": "Mumbai, India",
+    "startDate": "2017-02",
+    "endDate": "2017-09",
+    "highlights": [
+      "Developed the GST Bolton Tool to automate extraction and transformation of Form 26AS data for TDS return processing.",
+      "Supported end-to-end delivery activities including requirements analysis, design, development, deployment, and change impact assessment."
+    ]
+  },
+  {
+    "company": "CitiusTech",
+    "companyDomain": "citiustech.com",
+    "logoUrl": "logos/citiustech-logo.jpeg",
+    "role": "Sr. Software Engineer",
+    "location": "Mumbai, India",
+    "startDate": "2015-12",
+    "endDate": "2017-01",
+    "highlights": [
+      "Delivered features for the HCP Community Portal supporting healthcare providers, patient interactions, and lab reporting workflows.",
+      "Contributed to the MSC-Azure initiative to transform EMR and CPS data using Azure and Hadoop technologies.",
+      "Owned development, unit testing, deployment support, and defect resolution, and was recognized with Best Performer awards in 2016."
+    ]
+  },
+  {
+    "company": "Rave Technologies (AKA NEC Software)",
+    "companyDomain": "ravetechnologies.com",
+    "logoUrl": "logos/NEC.jpeg",
+    "role": "Software Engineer",
+    "location": "Mumbai, India",
+    "startDate": "2013-10",
+    "endDate": "2015-12",
+    "highlights": [
+      "Built and maintained IET Web Portal features for subscription management, payment processing, role-based access, and reporting.",
+      "Executed full SDLC responsibilities including requirement analysis, development, testing, deployment, and production issue resolution."
+    ]
+  }
+]

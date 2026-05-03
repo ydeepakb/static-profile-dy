@@ -1,0 +1,74 @@
+[
+  {
+    "category": "Project & Collaboration Tools",
+    "items": [
+      "Jira",
+      "Azure DevOps Boards",
+      "Confluence",
+      "Microsoft Teams"
+    ]
+  },
+  {
+    "category": "IDEs & Developer Tools",
+    "items": [
+      "Visual Studio Code",
+      "Visual Studio",
+      "IntelliJ IDEA",
+      "Postman"
+    ]
+  },
+  {
+    "category": "Source Control & CI/CD Tools",
+    "items": [
+      "Git",
+      "Azure DevOps Pipelines",
+      "GitHub Actions",
+      "SonarQube"
+    ]
+  },
+  {
+    "category": "Cloud & Infrastructure Tools",
+    "items": [
+      "AWS Console",
+      "Azure Portal",
+      "AWS CLI",
+      "Azure CLI",
+      "Terraform",
+      "Docker",
+      "Kubernetes",
+      "Amazon EC2",
+      "Amazon S3",
+      "AWS Lambda",
+      "Amazon RDS",
+      "Amazon EKS"
+    ]
+  },
+  {
+    "category": "AI, Agents & MCP Tools",
+    "items": [
+      "Amazon Bedrock",
+      "Anthropic Claude",
+      "MCP Servers",
+      "AWS MCP",
+      "GitHub Copilot"
+    ]
+  },
+  {
+    "category": "Data & Integration Tools",
+    "items": [
+      "Azure Data Factory",
+      "Azure Service Bus",
+      "SQL Server Management Studio",
+      "MongoDB Atlas"
+    ]
+  },
+  {
+    "category": "Observability & Diagnostics Tools",
+    "items": [
+      "Azure Functions",
+      "CloudWatch Logs",
+      "CloudWatch Metrics",
+      "Kubernetes Pod Logs"
+    ]
+  }
+]
