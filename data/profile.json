@@ -1,0 +1,13 @@
+{
+  "fullName": "Deepak Yadav",
+  "headline": "Lead Engineer",
+  "location": "Houston, TX, USA",
+  "email": "ydeepakb@gmail.com",
+  "phone": "+1 (832) 614-2093",
+  "summary": "Lead software engineering professional with 12+ years of experience architecting and delivering cloud-native, full-stack enterprise platforms across insurance, finance, healthcare, and e-commerce. Proven expertise in .NET, C#, React, and Angular, with strong depth in AWS, Azure DevOps, Docker, Service Bus, SQL Server, and PostgreSQL. Experienced in AI-enabled engineering, including designing MCP-based integrations and building agent-driven workflows and tools that expose enterprise capabilities for intelligent automation. Strong track record of leading cross-functional teams, driving CI/CD excellence, and delivering secure, scalable, high-performance solutions.",
+  "links": {
+    "github": "https://github.com/ydeepakb",
+    "linkedin": "https://www.linkedin.com/in/ydeepakb/",
+    "website": "https://ydeepakb.github.io/static-profile-dy/"
+  }
+}

@@ -1,0 +1,38 @@
+[
+  {
+    "category": "Frontend",
+    "items": ["React", "Angular", "Next.js", "TypeScript", "JavaScript", "Tailwind CSS"]
+  },
+  {
+    "category": "Backend",
+    "items": ["C#", ".NET Core", "ASP.NET MVC", "Microservices", "Node.js", "Python", "RESTful APIs"]
+  },
+  {
+    "category": "Cloud & DevOps",
+    "items": ["AWS Architecture", "Azure Architecture", "Infrastructure as Code", "Containerization", "CI/CD"]
+  },
+  {
+    "category": "AI / Agent Engineering",
+    "items": ["MCP Server Development", "AI Tooling Integration", "Agentic Workflow Design", "Prompt Engineering", "LLM Integration"]
+  },
+  {
+    "category": "Databases",
+    "items": ["SQL Server", "PostgreSQL", "MySQL", "DynamoDB", "MongoDB Atlas", "Data Modeling"]
+  },
+  {
+    "category": "Testing",
+    "items": ["TDD", "Unit Testing", "Integration Testing", "Code Quality Practices"]
+  },
+  {
+    "category": "Messaging",
+    "items": ["Asynchronous Messaging", "Event-Driven Integration"]
+  },
+  {
+    "category": "Methodologies",
+    "items": ["Agile", "Scrum", "System Design", "Enterprise Architecture", "Solution Architecture"]
+  },
+  {
+    "category": "Languages",
+    "items": ["English (Professional)", "Hindi (Professional)", "Spanish (Beginner)"]
+  }
+]

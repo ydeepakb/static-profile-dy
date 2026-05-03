@@ -1,0 +1,49 @@
+[
+  {
+    "title": "Insurance Domain Chatbot on Existing Microservices",
+    "summary": "Built a domain-focused insurance chatbot by orchestrating existing enterprise microservices and integrating Amazon Bedrock with Anthropic models for grounded, task-oriented responses.",
+    "highlights": [
+      "Reused existing backend service APIs instead of creating duplicate business logic, improving maintainability and consistency.",
+      "Designed prompt and tool-call flows to convert user intent into microservice actions across insurance workflows.",
+      "Implemented response guardrails and fallback handling for safer and more reliable production behavior."
+    ],
+    "tech": [
+      "Amazon Bedrock",
+      "Anthropic LLM",
+      "Microservices",
+      "API Orchestration",
+      "Prompt Engineering"
+    ]
+  },
+  {
+    "title": "AI-Powered Gmail Cleanup Utility",
+    "summary": "Created a personal productivity utility that applied sentiment and intent analysis to approximately 16,000 unread emails and automated cleanup and prioritization.",
+    "highlights": [
+      "Classified emails by sentiment and category to identify actionable, informational, and low-priority content.",
+      "Automated cleanup rules for archiving, labeling, and grouping to reduce inbox noise.",
+      "Generated concise summaries to speed up review of important communication."
+    ],
+    "tech": [
+      "LLM",
+      "Sentiment Analysis",
+      "Automation",
+      "Email Processing"
+    ]
+  },
+  {
+    "title": "Agent-Based Production Diagnostics with AWS MCP",
+    "summary": "Built autonomous agents that interact with official AWS MCP capabilities to diagnose production incidents and post first-pass analysis comments into Azure DevOps work items.",
+    "highlights": [
+      "Automated investigation across CloudWatch logs and internal pod logs to identify probable failure points.",
+      "Generated primary incident summaries with probable root-cause indicators and remediation suggestions.",
+      "Reduced manual triage effort by integrating diagnostics output directly into DevOps collaboration workflows."
+    ],
+    "tech": [
+      "AWS MCP",
+      "CloudWatch",
+      "Kubernetes Pods",
+      "AI Agents",
+      "Azure DevOps"
+    ]
+  }
+]

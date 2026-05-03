@@ -1,0 +1,42 @@
+[
+  {
+    "name": "ProAg",
+    "description": "U.S.-based crop insurance platform supporting MPCI, crop hail, livestock coverage, and private insurance products across 48 states.",
+    "tech": ["React", "C#", ".NET Core", "Microservices", "AWS", "Docker", "EKS", "Terraform"]
+  },
+  {
+    "name": "Pol-Admin (Policy Administration System)",
+    "description": "Policy administration system covering quote creation, policy management, endorsements, claims processing, and premium rating logic.",
+    "tech": ["Angular 8", "C#", "WCF", "REST API", "SQL Server", "PL/SQL"]
+  },
+  {
+    "name": "Quote Bind (v5)",
+    "description": "Web-based auto insurance quoting system integrated with Guidewire Policy and Billing Center.",
+    "tech": ["ASP.NET 4.6.2", "Angular", "AngularJS", "jQuery", "Web Services", "SSIS", "SSRS"]
+  },
+  {
+    "name": "QuickPay & Moderator",
+    "description": "Payment processing and moderation tools integrated with rules and external services for multi-state operations.",
+    "tech": ["ASP.NET", "Angular", "jQuery", "DevOps"]
+  },
+  {
+    "name": "GST Bolton Tool",
+    "description": "Automation tool for extraction and transformation of Form 26AS data for TDS return workflows.",
+    "tech": ["ASP.NET 4.5", "Angular 4", "jQuery", "ASP.NET MVC"]
+  },
+  {
+    "name": "HCP Community Portal",
+    "description": "Healthcare portal for reports and information management across entities, patients, and lab result workflows.",
+    "tech": ["ASP.NET MVC 5", "ASP.NET 4.5", "jQuery", "Entity Framework"]
+  },
+  {
+    "name": "MSC-Azure",
+    "description": "Big-data transformation initiative for EMR and CPS systems using Azure and Hadoop ecosystem.",
+    "tech": ["Azure Data Factory", "Hadoop", "Hive", "PIG"]
+  },
+  {
+    "name": "IET Web Portal",
+    "description": "Portal for subscription lifecycle, payments, role-based access control, and reporting.",
+    "tech": ["ASP.NET 4.5", "ASP.NET MVC", "jQuery", "HTML5", "Web Forms", "MarkLogic"]
+  }
+]
