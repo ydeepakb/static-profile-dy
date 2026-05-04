@@ -1,4 +1,4 @@
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   Award,
   BookOpen,
@@ -16,10 +16,12 @@ import {
   ServerCog,
   Sparkles,
   Workflow,
+  X,
 } from "lucide-react";
 import { DownloadActions } from "./components/DownloadActions";
 import { Section } from "./components/Section";
 import { useProfileData } from "./hooks/useProfileData";
+import type { Project } from "./types/profile";
 
 function getSkillCategoryIcon(category: string) {
   const normalized = category.toLowerCase();
@@ -35,10 +37,42 @@ function getSkillCategoryIcon(category: string) {
   return <Sparkles size={16} />;
 }
 
+function getCertificationLogo(issuer: string) {
+  const normalized = issuer.toLowerCase();
+
+  if (normalized.includes("microsoft")) {
+    return {
+      src: `${import.meta.env.BASE_URL}logos/ms-logo.png`,
+      alt: "Microsoft logo",
+    };
+  }
+
+  if (normalized.includes("amazon web services") || normalized === "aws") {
+    return {
+      src: `${import.meta.env.BASE_URL}logos/aws-logo.png`,
+      alt: "AWS logo",
+    };
+  }
+
+  return null;
+}
+
 function App() {
   const { data, loading, error } = useProfileData();
   const printableRef = useRef<HTMLDivElement>(null);
   const [showProfileImage, setShowProfileImage] = useState(true);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+
+  useEffect(() => {
+    function handleKeyDown(event: KeyboardEvent) {
+      if (event.key === "Escape") {
+        setSelectedProject(null);
+      }
+    }
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, []);
 
   const navItems = useMemo(
     () => [
@@ -72,14 +106,14 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-100 via-teal-50/40 to-amber-50/30 text-slate-800">
-      <nav className="not-print sticky top-0 z-20 border-b border-slate-200/80 bg-white/90 shadow-sm backdrop-blur">
+      <nav className="not-print sticky top-0 z-20 border-b border-teal-200/70 bg-gradient-to-r from-teal-100/90 via-white/95 to-amber-100/85 shadow-[0_10px_24px_-18px_rgba(15,23,42,0.35)] backdrop-blur">
         <div className="mx-auto max-w-6xl px-4 py-3">
           <ul className="flex flex-wrap gap-2">
             {navItems.map((item) => (
               <li key={item.id}>
                 <a
                   href={`#${item.id}`}
-                  className="inline-block rounded-full border border-slate-200 bg-white px-3 py-1 text-sm text-slate-700 transition hover:border-teal-300 hover:bg-teal-50 hover:text-teal-800"
+                  className="inline-block rounded-full border border-slate-200 bg-white px-3.5 py-1.5 text-sm font-medium text-slate-700 shadow-sm transition hover:border-teal-300 hover:bg-teal-50 hover:text-teal-800"
                 >
                   {item.label}
                 </a>
@@ -325,18 +359,41 @@ function App() {
             icon={<Award size={18} />}
           >
             <ul className="space-y-2 text-slate-700">
-              {data.certifications.map((item) => (
-                <li
-                  key={`${item.name}-${item.year}`}
-                  className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm"
-                >
-                  <span className="inline-flex items-center gap-2 font-medium text-slate-900">
-                    <Award size={15} className="text-teal-700" />
-                    {item.name}
-                  </span>{" "}
-                  - {item.issuer} ({item.year})
-                </li>
-              ))}
+              {data.certifications.map((item) => {
+                const logo = getCertificationLogo(item.issuer);
+
+                return (
+                  <li
+                    key={`${item.name}-${item.year}`}
+                    className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm"
+                  >
+                    <div className="flex items-start gap-3">
+                      {logo ? (
+                        <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+                          <img
+                            src={logo.src}
+                            alt={logo.alt}
+                            className="h-10 w-10 object-contain"
+                            loading="lazy"
+                          />
+                        </span>
+                      ) : (
+                        <span className="inline-flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 bg-slate-50">
+                          <Award size={16} className="text-teal-700" />
+                        </span>
+                      )}
+                      <div>
+                        <p className="font-medium text-slate-900">
+                          {item.name}
+                        </p>
+                        <p className="text-sm text-slate-600">
+                          {item.issuer} ({item.year})
+                        </p>
+                      </div>
+                    </div>
+                  </li>
+                );
+              })}
             </ul>
           </Section>
 
@@ -348,9 +405,11 @@ function App() {
           >
             <div className="grid gap-4 md:grid-cols-2">
               {data.projects.map((item) => (
-                <article
+                <button
+                  type="button"
                   key={item.name}
-                  className="rounded-2xl border border-slate-200/80 bg-white p-5 shadow-sm"
+                  onClick={() => setSelectedProject(item)}
+                  className="rounded-2xl border border-slate-200/80 bg-white p-5 text-left shadow-sm transition hover:-translate-y-0.5 hover:border-teal-200 hover:shadow-md"
                 >
                   <h3 className="inline-flex items-center gap-2 text-lg font-semibold text-slate-900">
                     <FolderGit2 size={17} className="text-teal-700" />
@@ -367,17 +426,10 @@ function App() {
                       </span>
                     ))}
                   </div>
-                  {item.url && (
-                    <a
-                      href={item.url}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="mt-3 inline-block text-sm font-medium text-slate-900 underline"
-                    >
-                      View project
-                    </a>
-                  )}
-                </article>
+                  <p className="mt-3 text-sm font-medium text-teal-700">
+                    Click to view full details
+                  </p>
+                </button>
               ))}
             </div>
           </Section>
@@ -418,6 +470,71 @@ function App() {
             </div>
           </Section>
         </div>
+
+        {selectedProject && (
+          <div
+            className="not-print fixed inset-0 z-50 flex items-center justify-center bg-slate-900/55 p-4"
+            onClick={() => setSelectedProject(null)}
+          >
+            <div
+              className="w-full max-w-3xl rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl"
+              onClick={(event) => event.stopPropagation()}
+            >
+              <div className="mb-4 flex items-start justify-between gap-4">
+                <div>
+                  <h3 className="text-2xl font-semibold text-slate-900">
+                    {selectedProject.name}
+                  </h3>
+                  <p className="mt-1 text-slate-700">
+                    {selectedProject.longDescription ??
+                      selectedProject.description}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  onClick={() => setSelectedProject(null)}
+                  className="rounded-xl border border-slate-200 p-2 text-slate-600 transition hover:bg-slate-50"
+                  aria-label="Close project details"
+                >
+                  <X size={18} />
+                </button>
+              </div>
+
+              {selectedProject.details &&
+                selectedProject.details.length > 0 && (
+                  <ul className="mb-4 list-disc space-y-2 pl-5 text-slate-700">
+                    {selectedProject.details.map((detail) => (
+                      <li key={`${selectedProject.name}-${detail}`}>
+                        {detail}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+              <div className="mb-4 flex flex-wrap gap-2">
+                {selectedProject.tech.map((tech) => (
+                  <span
+                    key={`${selectedProject.name}-${tech}`}
+                    className="rounded-full border border-amber-100 bg-amber-50/70 px-3 py-1 text-xs text-slate-700"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
+
+              {selectedProject.url && (
+                <a
+                  href={selectedProject.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-block text-sm font-medium text-slate-900 underline"
+                >
+                  View project link
+                </a>
+              )}
+            </div>
+          </div>
+        )}
       </main>
 
       <div className="mx-auto max-w-6xl px-4 pb-8">

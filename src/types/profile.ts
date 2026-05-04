@@ -49,6 +49,8 @@ export interface Certification {
 export interface Project {
   name: string
   description: string
+  longDescription?: string
+  details?: string[]
   tech: string[]
   url?: string
 }

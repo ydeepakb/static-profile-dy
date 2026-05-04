@@ -1,42 +1,98 @@
 [
   {
-    "name": "ProAg",
+    "name": "ProAg Works",
     "description": "U.S.-based crop insurance platform supporting MPCI, crop hail, livestock coverage, and private insurance products across 48 states.",
+    "longDescription": "ProAg is an access-controlled crop insurance ecosystem that supports agents and underwriters through multiple integrated applications for quoting, policy administration, claims, map data, acreage reporting, and an offline distributed adjuster workflow. The platform follows RMA regulations and crop insurance compliance rules while delivering a modern, cloud-native architecture.",
+    "details": [
+      "Implemented role-based access and workflow segregation for agents, underwriters, and operations users across multiple business applications.",
+      "Delivered compliant insurance workflows aligned with RMA guidelines for quoting, policy issuance, endorsements, and claims processing.",
+      "Built integrated capabilities for map data operations, acreage reporting, and field-adjuster scenarios including offline-first distributed adjuster support.",
+      "Engineered the solution with React and Angular frontends, .NET microservices backend services, and AWS cloud infrastructure using EKS and API Gateway."
+    ],
     "tech": ["React", "C#", ".NET Core", "Microservices", "AWS", "Docker", "EKS", "Terraform"]
   },
   {
-    "name": "Pol-Admin (Policy Administration System)",
+    "name": "Policy Administration System for American Family Connect",
     "description": "Policy administration system covering quote creation, policy management, endorsements, claims processing, and premium rating logic.",
+    "longDescription": "Built core capabilities for American Family Connect's policy administration platform, with a strong focus on the rating engine used to calculate premiums and provide rate results consumed by policy administration workflows.",
+    "details": [
+      "Implemented and enhanced rating engine components to calculate accurate policy rates based on line of business rules, risk factors, and underwriting inputs.",
+      "Integrated rating services into quote and policy workflows so calculated premiums could be consumed consistently by the policy administration tool.",
+      "Supported rule and rate change rollout across environments, including validation, regression checks, and production readiness activities.",
+      "Collaborated with business and QA teams to verify rating outcomes, troubleshoot premium discrepancies, and ensure policy transactions aligned with expected rate behavior."
+    ],
     "tech": ["Angular 8", "C#", "WCF", "REST API", "SQL Server", "PL/SQL"]
   },
   {
-    "name": "Quote Bind (v5)",
+    "name": "Quote Bind (v5) for Safe-auto Insurance",
     "description": "Web-based auto insurance quoting system integrated with Guidewire Policy and Billing Center.",
+    "longDescription": "Quote Bind (v5) is a customer-facing auto insurance platform for SafeAuto. I designed and delivered the front-end application to support multiple quote and bind workflows driven by third-party data sources and policy system integrations.",
+    "details": [
+      "Designed and built the customer-facing web application experience for quote, bind, and policy purchase journeys.",
+      "Implemented dynamic workflow handling to support different user paths based on eligibility, underwriting inputs, and external data responses.",
+      "Integrated Guidewire APIs and third-party data providers to drive real-time quoting and policy decisions.",
+      "Implemented integrations for credit-check-driven rating factors and SR22-specific flow handling as part of compliance-oriented insurance workflows."
+    ],
     "tech": ["ASP.NET 4.6.2", "Angular", "AngularJS", "jQuery", "Web Services", "SSIS", "SSRS"]
   },
   {
     "name": "QuickPay & Moderator",
     "description": "Payment processing and moderation tools integrated with rules and external services for multi-state operations.",
+    "longDescription": "QuickPay & Moderator was built for SafeAuto to support a fast-track payment flow and moderation workflows that improved payment processing speed and operational control.",
+    "details": [
+      "Delivered a QuickPay flow to process fast-track customer payments with a streamlined user experience.",
+      "Implemented moderation workflows for payment validations, exceptions, and operational review handling.",
+      "Integrated business rules and external services to ensure payment processing behavior stayed consistent across states and policy scenarios.",
+      "Supported production readiness through defect resolution, workflow tuning, and cross-team testing coordination."
+    ],
     "tech": ["ASP.NET", "Angular", "jQuery", "DevOps"]
   },
   {
     "name": "GST Bolton Tool",
     "description": "Automation tool for extraction and transformation of Form 26AS data for TDS return workflows.",
+    "longDescription": "Developed with Deloitte during the rollout of India’s new GST regime, the GST Bolton Tool automated tax data processing and was distributed to Deloitte customers to support compliant reporting operations.",
+    "details": [
+      "Automated extraction and transformation of Form 26AS data to reduce manual effort in TDS return preparation.",
+      "Built the solution during the early GST transition period to align with evolving tax reporting requirements.",
+      "Worked in collaboration with Deloitte teams to package and distribute the tool for customer use.",
+      "Improved turnaround time and consistency for high-volume tax data handling and reconciliation."
+    ],
     "tech": ["ASP.NET 4.5", "Angular 4", "jQuery", "ASP.NET MVC"]
   },
   {
     "name": "HCP Community Portal",
     "description": "Healthcare portal for reports and information management across entities, patients, and lab result workflows.",
+    "longDescription": "HCP Community Portal was a healthcare platform focused on patient and provider information workflows, including HL7-based data handling and report delivery across healthcare entities.",
+    "details": [
+      "Implemented provider and patient-facing workflows for healthcare data access, reporting, and collaboration.",
+      "Worked with HL7-oriented healthcare data integration patterns to support interoperability needs.",
+      "Built modules for patient information handling, lab report workflows, and secure data visibility controls.",
+      "Supported deployment and stabilization activities for reliable day-to-day clinical and operational usage."
+    ],
     "tech": ["ASP.NET MVC 5", "ASP.NET 4.5", "jQuery", "Entity Framework"]
   },
   {
     "name": "MSC-Azure",
     "description": "Big-data transformation initiative for EMR and CPS systems using Azure and Hadoop ecosystem.",
+    "longDescription": "MSC-Azure focused on large-scale data migration and transformation into Azure, including Azure Data Factory pipelines and R&D work for cluster setup, container deployment, and application execution.",
+    "details": [
+      "Built and operated Azure Data Factory pipelines to migrate and transform high-volume enterprise datasets into Azure.",
+      "Contributed to R&D activities for cluster provisioning and environment setup for big-data workloads.",
+      "Created and deployed Docker images and application components to support data processing workflows.",
+      "Collaborated across platform and application teams to validate data quality, throughput, and operational reliability."
+    ],
     "tech": ["Azure Data Factory", "Hadoop", "Hive", "PIG"]
   },
   {
     "name": "IET Web Portal",
     "description": "Portal for subscription lifecycle, payments, role-based access control, and reporting.",
+    "longDescription": "IET Web Portal was an e-learning and digital content platform for the UK’s largest engineering institution, delivering subscriptions, e-books, and video learning experiences similar to a modern content portal.",
+    "details": [
+      "Developed subscription lifecycle features including enrollment, renewal, and payment-linked access workflows.",
+      "Implemented role-based access and content gating for member and non-member user journeys.",
+      "Delivered digital content capabilities for e-books and video learning, supporting a portal-style learning experience.",
+      "Built reporting and administration modules to improve operational monitoring and content usage visibility."
+    ],
     "tech": ["ASP.NET 4.5", "ASP.NET MVC", "jQuery", "HTML5", "Web Forms", "MarkLogic"]
   }
 ]
