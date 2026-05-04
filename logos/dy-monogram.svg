@@ -1,7 +1,13 @@
 <svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
   <circle cx="128" cy="128" r="112" fill="#0F766E"/>
   <circle cx="128" cy="128" r="112" stroke="#0F172A" stroke-opacity="0.12" stroke-width="8"/>
+
+  <!-- D spine -->
   <rect x="74" y="70" width="18" height="116" rx="9" fill="#FFFFFF"/>
+
+  <!-- D bowl -->
   <path d="M92 70H128C160.033 70 186 95.9675 186 128C186 160.033 160.033 186 128 186H92V168H127C149.091 168 167 150.091 167 128C167 105.909 149.091 88 127 88H92V70Z" fill="#FFFFFF"/>
+
+  <!-- Y mark -->
   <path d="M111 96L129 118L147 96H169L139 132V176H120V132L90 96H111Z" fill="#F59E0B"/>
 </svg>
